@@ -3,7 +3,9 @@
 ## 📝 Description
 Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version **17.2.1**.
 
-Utilisez `ng serve` pour lancer le serveur de développement. Naviguer à `http://localhost:4200/`. L'application se rechargera automatiquement si vous modifiez l'un des fichiers sources.
+Utilisez `ng serve` pour lancer le serveur de développement (http://localhost:4200/).
+
+L'application se rechargera automatiquement si vous modifiez l'un des fichiers sources.
 
 ## 📦 Installation
 Pour installer les dépendances, exécutez `npm install`.
