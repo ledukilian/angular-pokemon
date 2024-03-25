@@ -1,7 +1,7 @@
 # 🦝 Angular Pokémon 🐼
 
 ## 📝 Description
-Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version **17.2.1**.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version **16.2**.
 
 Utilisez `ng serve` pour lancer le serveur de développement (http://localhost:4200/).
 
