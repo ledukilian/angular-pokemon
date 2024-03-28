@@ -10,6 +10,7 @@ import { POKEMONS } from "./mock-pokemon-list";
 export class AppComponent implements OnInit {
   title = 'Angular Pokémon';
   pokemonList: Pokemon[] = POKEMONS;
+  pokemonSelected: Pokemon|undefined;
 
   constructor() {
 
@@ -17,10 +18,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit():void {
     console.table(this.pokemonList);
-    this.selectPokemon(this.pokemonList[9]);
+    //this.selectPokemon(this.pokemonList[9]);
   }
 
-  selectPokemon(pokemon: Pokemon): void {
-    console.log(`Vous avez choisi : ${pokemon.name}`);
+  selectPokemon(pokemonId: string): void {
+    const pokemon: Pokemon | undefined = this.pokemonList.find(pokemon => pokemon.id === +pokemonId);
+    if (pokemon) {
+      this.pokemonSelected = pokemon;
+    } else {
+      console.warn('Pokemon not found');
+      this.pokemonSelected = undefined;
+    }
   }
 }
