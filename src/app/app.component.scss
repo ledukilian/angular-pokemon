@@ -7,6 +7,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.contrast {
+  filter: saturate(170%);
+}
+
 h1,
 h2,
 h3,

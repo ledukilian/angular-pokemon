@@ -19,13 +19,33 @@
 
 <div class="content" role="main">
   <h2>Liste des Pokémons</h2>
-  <small>
-  <ul>
-    <li *ngFor="let pokemon of pokemonList">
-      <b>[{{ pokemon.id }}]</b> {{ pokemon.name }}
-    </li>
-  </ul>
-  </small>
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img
+                class="contrast"
+                [src]="pokemon.picture"
+                alt="Image de {{ pokemon.name }}"
+              />
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p><b>{{ pokemon.name }}</b> <small>[{{ pokemon.id }}]</small></p>
+                <p>
+                  <span *ngFor="let type of pokemon.types">{{ type }}</span>
+                </p>
+                <p>❤ <b>{{ pokemon.hp }}</b></p>
+                <p>⚔ <b>{{ pokemon.cp }}</b></p>
+                <!--<p class=""><small>{{ pokemon.created }}</small></p>-->
+              </div>
+
+        </div>
+      </div>
+    </div>
+
+
   <br/>
   <div>
     <input
