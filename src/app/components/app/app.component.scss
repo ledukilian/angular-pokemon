@@ -21,10 +21,6 @@ h2 {
   font-weight: 600;
 }
 
-.contrast {
-  filter: saturate(170%);
-}
-
 h1,
 h2,
 h3,
@@ -198,11 +194,15 @@ svg#clouds {
 
 .pkmn-type {
   display: inline-block;
-  padding: 2px 4px;
+  padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.8em;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0 4px;
+  margin-right: 3px;
+}
+
+.contrast {
+  filter: saturate(170%);
 }
 
