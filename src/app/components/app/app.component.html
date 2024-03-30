@@ -30,7 +30,7 @@
                 <p>
                   <span *ngFor="let type of pokemon.types">{{ type }}</span>
                 </p>
-                <!--<p class=""><small>{{ pokemon.created }}</small></p>-->
+                <p class=""><small>{{ pokemon.created | date:"dd/MM/yyyy" }}</small></p>
               </div>
 
         </div>
