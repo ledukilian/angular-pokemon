@@ -206,3 +206,9 @@ svg#clouds {
   filter: saturate(170%);
 }
 
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
