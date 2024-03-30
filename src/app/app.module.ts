@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { BorderCardDirective } from "./directives/border-card/border-card.directive";
+import {PokemonTypeColorPipe} from "./pipes/pokemon-type-color/pokemon-type-color.pipe";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BorderCardDirective } from "./directives/border-card/border-card.direct
     BrowserModule,
     AppRoutingModule,
     BorderCardDirective,
-    BorderCardDirective
+    BorderCardDirective,
+    PokemonTypeColorPipe
   ],
   providers: [],
   bootstrap: [AppComponent]
