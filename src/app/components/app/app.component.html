@@ -5,66 +5,17 @@
     src="assets/angular_pokemon.png"
   />
   <span>{{ title }}</span>
-    <div class="spacer"></div>
+    <div class="spacer">
+      <a [routerLink]="['/pokemons']" class="white-text">Accueil</a>
+    </div>
 </div>
 
+
+
 <div class="content" role="main">
-
-  <h2>Liste des Pokémons</h2>
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let pokemon of pokemonList" class="col m6 s6">
-          <!--<div class="card horizontal" pkmnBorderCard="red">-->
-          <div class="card horizontal prevent-select" pkmnBorderCard>
-            <div class="card-image valign-wrapper">
-              <img
-                class="contrast pkmn-image"
-                [src]="pokemon.picture"
-                alt="Image de {{ pokemon.name }}"
-              />
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>
-                  <span *ngFor="let type of pokemon.types"
-                        class="pkmn-type {{ type | pokemonTypeColor}}">{{ type }}</span>
-                </p>
-                <p>
-                  <b>{{ pokemon.name }}</b>
-                </p>
-                <p>❤ <b>{{ pokemon.hp }}</b></p>
-                <p>⚔ <b>{{ pokemon.cp }}</b></p>
-                <p><small>{{ pokemon.created | date:"dd/MM/yyyy" }}</small></p>
-                <p class="right-align grey-text text-lighten-1">
-                  <small>{{ pokemon.id }}</small>
-                </p>
-              </div>
-
-        </div>
-      </div>
-    </div>
-
-        <br/>
-
-        <h2>Rechercher un pokémon par identifiant</h2>
-        <div class="row">
-          <input
-            #input
-            (keyup.enter)="selectPokemon(input.value)"
-            type="number"
-          />
-          <button (click)="selectPokemon(input.value)"
-                  class="waves-effect waves-light btn blue darken-1">Rechercher</button>
-        </div>
-        <br/>
-        <p *ngIf="pokemonSelected">✅ Vous avez choisi <b>{{ pokemonSelected?.name }}</b></p>
-        <p style="color: #d32a2a" *ngIf="!pokemonSelected">❌ Impossible de trouver ce pokémon</p>
-
-        <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
-          <title>Rocket Ship Smoke</title>
-          <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
-        </svg>
-
-
-
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+    <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
+      <title>Rocket Ship Smoke</title>
+      <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
+    </svg>
+</div>
