@@ -1,0 +1,54 @@
+<h2>Liste des Pokémons</h2>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonList" class="col m6 s6">
+      <!--<div class="card horizontal" pkmnBorderCard="red">-->
+      <div class="card horizontal prevent-select" pkmnBorderCard [routerLink]="['/pokemons', pokemon.id]">
+        <div class="card-image valign-wrapper">
+          <img
+            class="pkmn-image"
+            src="{{ pokemon.picture }}"
+            alt="Image de {{ pokemon.name }}"
+          />
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>
+              <b>{{ pokemon.name }}</b>
+            </p>
+            <p>
+                  <span *ngFor="let type of pokemon.types"
+                        class="pkmn-type {{ type | pokemonTypeColor}}">{{ type }}</span>
+            </p>
+            <!--<p>❤ <b>{{ pokemon.hp }}</b></p>-->
+            <!--<p>⚔ <b>{{ pokemon.cp }}</b></p>-->
+            <!--<p><small>{{ pokemon.created | date:"dd/MM/yyyy" }}</small></p>-->
+            <!--<a [routerLink]="['/pokemons', pokemon.id]" class="waves-effect blue darken-2 btn-small">Voir</a>-->
+            <!--<p class="right-align grey-text text-lighten-1">
+              <small>{{ pokemon.id }}</small>
+            </p>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2>Rechercher un pokémon par identifiant</h2>
+    <div class="row">
+      <input
+        #input
+        (keyup.enter)="selectPokemon(input.value)"
+        type="number"
+      />
+      <button (click)="selectPokemon(input.value)"
+              class="waves-effect waves-light btn blue darken-1">Rechercher</button>
+    </div>
+    <br/>
+    <p *ngIf="pokemonSelected">✅ Vous avez choisi <b>{{ pokemonSelected?.name }}</b></p>
+    <p style="color: #d32a2a" *ngIf="!pokemonSelected">❌ Impossible de trouver ce pokémon</p>
+
+  </div>
+</div>
+
+
+
