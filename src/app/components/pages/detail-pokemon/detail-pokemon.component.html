@@ -1,38 +1,38 @@
-<div *ngIf="pokemon" class="row s12">
-    <div class="card">
-        <div class="card-content">
-          <img [src]="pokemon.picture" class="pkmn-image" alt="Image de {{ pokemon.name }}">
-          <h2 class="header center">{{ pokemon.name }}</h2>
-          <table class="bordered striped">
-            <tbody>
-            <tr>
-              <td>Types</td>
-              <td>
-                <span *ngFor="let type of pokemon.types" class="pkmn-type {{ type | pokemonTypeColor }}">{{ type }}</span>
-              </td>
-            </tr>
-            <tr>
-              <td>Points de vie</td>
-              <td>❤ <strong>{{ pokemon.hp }}</strong></td>
-            </tr>
-            <tr>
-              <td>Dégâts</td>
-              <td>⚔ <strong>{{ pokemon.cp }}</strong></td>
-            </tr>
-            <tr>
-              <td>Date de création</td>
-              <td><em>{{ pokemon.created | date:"dd/MM/yyyy" }}</em></td>
-            </tr>
-            <tr>
-              <td>ID</td>
-              <td><strong>{{ pokemon.id }}</strong></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card-action">
-          <a (click)="goBack()" class="waves-effect blue darken-2 btn-small">Retour</a>
-        </div>
+<div *ngIf="pokemon" id="pokemon-details" class="row s6">
+    <div class="card m6">
+      <div class="card-content">
+        <img [src]="pokemon.picture" class="pkmn-image" alt="Image de {{ pokemon.name }}">
+        <h2 class="header center">{{ pokemon.name }}</h2>
+        <table class="bordered striped">
+          <tbody>
+          <tr>
+            <td>Types</td>
+            <td>
+              <span *ngFor="let type of pokemon.types" class="pkmn-type {{ type | pokemonTypeColor }}">{{ type }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Points de vie</td>
+            <td>❤ <strong>{{ pokemon.hp }}</strong></td>
+          </tr>
+          <tr>
+            <td>Dégâts</td>
+            <td>⚔ <strong>{{ pokemon.cp }}</strong></td>
+          </tr>
+          <tr>
+            <td>Date de création</td>
+            <td><em>{{ pokemon.created | date:"dd/MM/yyyy" }}</em></td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td><strong>{{ pokemon.id }}</strong></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-action">
+        <a (click)="goBack()" class="waves-effect blue darken-2 btn-small">Retour</a>
+      </div>
     </div>
 </div>
 <h4 *ngIf='!pokemon' class="center">Le pokémon est introuvable</h4>

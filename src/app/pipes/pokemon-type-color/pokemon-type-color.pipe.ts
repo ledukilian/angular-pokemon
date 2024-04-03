@@ -51,7 +51,6 @@ export class PokemonTypeColorPipe implements PipeTransform {
 
     // On combine une classe "puce" avec la couleur pour obtenir le badge de couleur
     return color;
-    return 'chip ' + color;
 
   }
 }

@@ -9,6 +9,7 @@ import { ListPokemonComponent } from './components/pages/list-pokemon/list-pokem
 import { DetailPokemonComponent } from './components/pages/detail-pokemon/detail-pokemon.component';
 import { NgOptimizedImage } from "@angular/common";
 import { NotFoundComponent } from './components/pages/errors/not-found/not-found.component';
+import {PokemonTypeEmojiPipe} from "./pipes/pokemon-type-emoji/pokemon-type-emoji.pipe";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './components/pages/errors/not-found/not-found
     BorderCardDirective,
     BorderCardDirective,
     PokemonTypeColorPipe,
-    NgOptimizedImage
+    NgOptimizedImage,
+    PokemonTypeEmojiPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

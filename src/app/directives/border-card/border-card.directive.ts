@@ -11,12 +11,10 @@ export class BorderCardDirective {
   // Couleur par défaut
   private initialColor: string = '#f5f5f5';
   private defaultColor: string = '#1976D2';
-  private defaultHeight: number = 180;
 
   // On injecte l'élément du DOM
   constructor(private el: ElementRef) {
     this.setBorderColor(this.initialColor);
-    this.setHeight(this.defaultHeight);
   }
 
   // Permet d'avoir une saisie sur la couleur de la bordure
@@ -33,12 +31,6 @@ export class BorderCardDirective {
   @HostListener('mouseleave') onMouseLeave() {
     // La bordure reprend sa couleur par défaut (pas de couleur)
     this.setBorderColor(this.initialColor);
-  }
-
-  // Permet de définir la hauteur de la carte
-  setHeight(height: number) {
-    // On définit la hauteur de la carte
-    this.el.nativeElement.style.height = `${height}px`;
   }
 
   // Permet de définir la couleur de la bordure

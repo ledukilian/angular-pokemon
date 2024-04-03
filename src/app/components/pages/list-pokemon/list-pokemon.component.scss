@@ -13,7 +13,8 @@ h2 {
   font-size: 0.8em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-right: 3px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .pkmn-image {
@@ -25,4 +26,9 @@ h2 {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.w-80 {
+  margin-left: 10%;
+  width: 80%;
+  max-width: 80%;
 }
