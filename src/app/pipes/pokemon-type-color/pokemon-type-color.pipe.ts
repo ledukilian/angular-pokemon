@@ -21,7 +21,7 @@ export class PokemonTypeColorPipe implements PipeTransform {
         color = 'green lighten-1';
         break;
       case 'Insecte':
-        color = 'brown lighten-1';
+        color = 'brown lighten-2';
         break;
       case 'Normal':
         color = 'grey lighten-3';
