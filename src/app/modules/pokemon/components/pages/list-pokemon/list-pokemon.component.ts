@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {POKEMONS} from "../../../data/mock-pokemon-list";
 import {Pokemon} from "../../../models/pokemon";
+import {PokemonService} from "../../../services/pokemon.service";
 
 @Component({
   selector: 'app-list-pokemon',
@@ -8,16 +8,16 @@ import {Pokemon} from "../../../models/pokemon";
   styleUrls: ['./list-pokemon.component.scss']
 })
 export class ListPokemonComponent implements OnInit {
-  pokemonList: Pokemon[] = POKEMONS;
+  pokemonList: Pokemon[];
   pokemonSelected: Pokemon|undefined;
 
-  constructor() {
-
-  }
+  constructor(
+    private pokemonService: PokemonService
+  ) {}
 
   ngOnInit():void {
     console.table(this.pokemonList);
-    //this.selectPokemon(this.pokemonList[9]);
+    this.pokemonList = this.pokemonService.getPokemonList();
   }
 
   selectPokemon(pokemonId: string): void {
