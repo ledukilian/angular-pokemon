@@ -1,0 +1,5 @@
+<p *ngIf="pokemon" class="center">
+  <img [src]="pokemon.picture" class="pkmn-image" alt="{{ pokemon?.name }}" />
+</p>
+<h2>Éditer {{ pokemon?.name}}</h2>
+<app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
