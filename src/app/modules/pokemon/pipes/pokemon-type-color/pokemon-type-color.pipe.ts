@@ -1,57 +1,55 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'pokemonTypeEmoji',
-  standalone: true
+  name: 'pokemonTypeColor'
 })
-export class PokemonTypeEmojiPipe implements PipeTransform {
-
+export class PokemonTypeColorPipe implements PipeTransform {
   transform(type: string): string {
 
-    let emoji: string;
+    let color: string;
 
     // On parcourt tous les types pour afficher la couleur correspondante
     switch (type) {
       case 'Feu':
-        emoji = '🔥';
+        color = 'red lighten-1';
         break;
       case 'Eau':
-        emoji = '💧';
+        color = 'blue lighten-1';
         break;
       case 'Plante':
-        emoji = '🌱';
+        color = 'green lighten-1';
         break;
       case 'Insecte':
-        emoji = '🐛';
+        color = 'brown lighten-2';
         break;
       case 'Normal':
-        emoji = '🐾';
+        color = 'grey lighten-3';
         break;
       case 'Vol':
-        emoji = '🕊️';
+        color = 'blue lighten-3';
         break;
       case 'Poison':
-        emoji = '☠️';
+        color = 'deep-purple accent-1';
         break;
       case 'Fée':
-        emoji = '✨';
+        color = 'pink lighten-4';
         break;
       case 'Psy':
-        emoji = '🌀';
+        color = 'deep-purple darken-2';
         break;
       case 'Électrique':
-        emoji = '⚡';
+        color = 'lime accent-1';
         break;
       case 'Combat':
-        emoji = '👊';
+        color = 'deep-orange';
         break;
       default:
-        emoji = '🐾';
+        color = 'grey';
         break;
     }
 
     // On combine une classe "puce" avec la couleur pour obtenir le badge de couleur
-    return emoji + ' ';
+    return color;
 
   }
 }

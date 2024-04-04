@@ -1,7 +1,7 @@
 <h2>Liste des Pokémons</h2>
 
 <div class="row">
-  <div *ngFor="let pokemon of pokemonList" class="col m3 s6">
+  <div *ngFor="let pokemon of pokemonList" class="col m4 s6">
     <div class="card" pkmnBorderCard [routerLink]="['/pokemons', pokemon.id]">
       <div class="card-image">
         <img

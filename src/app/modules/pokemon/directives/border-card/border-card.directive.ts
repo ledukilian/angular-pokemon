@@ -2,8 +2,7 @@ import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 
 // On définit le sélecteur de la directive (avec préfixe pkmn pour la propreté)
 @Directive({
-  selector: '[pkmnBorderCard]',
-  standalone: true
+  selector: '[pkmnBorderCard]'
 })
 
 export class BorderCardDirective {
