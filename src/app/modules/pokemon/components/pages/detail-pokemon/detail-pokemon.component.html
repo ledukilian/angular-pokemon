@@ -3,9 +3,6 @@
     <div class="row">
       <div class="col s12">
         <div class="card">
-          <div class="card-action">
-            <a (click)="goBack()" class="waves-effect red darken-1 btn-small">Retour</a>
-          </div>
           <div class="card-image">
             <img [src]="pokemon.picture" class="pkmn-image" alt="Image de {{ pokemon.name }}">
           </div>
@@ -24,8 +21,8 @@
             <p class="text-muted">{{ pokemon.created | date:"dd/MM/yyyy" }}</p>
           </div>
           <div class="card-action">
-            <a (click)="goBack()" class="waves-effect blue darken-2 btn-small" disabled>Supprimer</a>
-            <a (click)="goBack()" class="waves-effect blue darken-2 btn-small" disabled>Modifier</a>
+            <a (click)="goBack()" class="waves-effect red darken-1 btn-small" style="margin-right:16px;">Retour</a>
+            <a (click)="goToEdit(pokemon)" class="waves-effect blue darken-2 btn-small">Modifier</a>
           </div>
         </div>
       </div>

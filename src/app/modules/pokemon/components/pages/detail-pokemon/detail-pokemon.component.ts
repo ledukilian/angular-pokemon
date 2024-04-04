@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Pokemon } from "../../../models/pokemon";
 import { PokemonService } from "../../../services/pokemon.service";
 
@@ -13,6 +13,7 @@ export class DetailPokemonComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private pokemonService: PokemonService
   ) {}
 
@@ -28,6 +29,10 @@ export class DetailPokemonComponent implements OnInit {
   }
 
   goBack() {
-    window.history.back();
+    this.router.navigate(['/pokemons']);
+  }
+
+  goToEdit(pokemon: Pokemon) {
+    this.router.navigate(['/pokemon/modifier', pokemon.id]);
   }
 }

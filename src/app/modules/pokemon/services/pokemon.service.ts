@@ -13,7 +13,7 @@ export class PokemonService {
     return POKEMONS.find(pokemon => pokemon.id === pokemonId);
   }
 
-  getPokemonTypeList(): String[] {
+  getPokemonTypeList(): string[] {
     return [
       'Plante',
       'Feu',
@@ -25,13 +25,7 @@ export class PokemonService {
       'Fée',
       'Vol',
       'Combat',
-      'Psy',
-      'Sol',
-      'Roche',
-      'Spectre',
-      'Acier',
-      'Glace',
-      'Dragon'
+      'Psy'
     ]
   }
 }
