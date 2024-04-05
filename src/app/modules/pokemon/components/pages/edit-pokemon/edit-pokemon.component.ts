@@ -24,7 +24,8 @@ export class EditPokemonComponent {
     if (!pokemonId) {
       console.error("Pokemon not found");
     }
-    this.pokemon = this.pokemonService.getPokemonById(pokemonId);
+    this.pokemonService.getPokemonById(pokemonId)
+      .subscribe(pokemon => this.pokemon = pokemon);
   }
 
   goBack(pokemon: Pokemon): void {
