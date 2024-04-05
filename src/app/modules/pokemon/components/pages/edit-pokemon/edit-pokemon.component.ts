@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Pokemon} from "../../../models/pokemon";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {PokemonService} from "../../../services/pokemon.service";
 
 @Component({
@@ -14,7 +14,8 @@ export class EditPokemonComponent {
 
   constructor(
     private pokemonService: PokemonService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   )
   {}
 
@@ -26,4 +27,7 @@ export class EditPokemonComponent {
     this.pokemon = this.pokemonService.getPokemonById(pokemonId);
   }
 
+  goBack(pokemon: Pokemon): void {
+    this.router.navigate(['/pokemon', pokemon.id]);
+  }
 }

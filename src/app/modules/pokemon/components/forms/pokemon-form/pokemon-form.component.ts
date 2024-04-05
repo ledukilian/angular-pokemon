@@ -29,7 +29,7 @@ export class PokemonFormComponent implements OnInit {
     if (this.pokemon.types.length === 1 && this.hasType(type)) {
       return false;
     }
-    if (this.pokemon.types.length >= 2 && !this.hasType(type)) {
+    if (this.pokemon.types.length >= 3 && !this.hasType(type)) {
       return false;
     }
     return true;

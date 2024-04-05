@@ -1,5 +1,5 @@
-<p *ngIf="pokemon" class="center">
-  <img [src]="pokemon.picture" class="pkmn-image" alt="{{ pokemon?.name }}" />
-</p>
+<div class="center">
+  <a *ngIf="pokemon" (click)="goBack(pokemon)" class="waves-effect red darken-1 btn-small" style="margin-right:16px;">Retour</a>
+</div>
 <h2>Éditer {{ pokemon?.name}}</h2>
 <app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>

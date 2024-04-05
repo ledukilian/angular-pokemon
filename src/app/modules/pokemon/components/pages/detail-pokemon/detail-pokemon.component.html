@@ -7,17 +7,17 @@
             <img [src]="pokemon.picture" class="pkmn-image" alt="Image de {{ pokemon.name }}">
           </div>
           <div class="card-content">
-            <h2 class="header center">{{ pokemon.name }}</h2>
             <p>
                 <span *ngFor="let type of pokemon.types"
                                              class="pkmn-type {{ type | pokemonTypeColor}}">
                 {{ type | pokemonTypeEmoji}}{{ type }}
               </span>
             </p>
+            <h2 class="header center">{{ pokemon.name }}</h2>
             <p>❤ <strong>{{ pokemon.hp }}</strong></p>
             <p>⚔ <strong>{{ pokemon.cp }}</strong></p>
             <br />
-            <p class="text-muted">{{ pokemon.id }}</p>
+            <p class="text-muted">[{{ pokemon.id }}]</p>
             <p class="text-muted">{{ pokemon.created | date:"dd/MM/yyyy" }}</p>
           </div>
           <div class="card-action">

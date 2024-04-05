@@ -8,10 +8,16 @@ input[type="text"], input[type="number"], select {
   padding-left: 10px;
 }
 
+.pkmn-image {
+  margin: auto;
+  max-width: 18em;
+  filter: saturate(170%);
+  transform: rotateY(3.142rad);
+}
 .pkmn-type {
   color: black;
   display: inline-block;
-  padding: 2px 6px;
+  padding: 0px 4px;
   border-radius: 4px;
   font-size: 0.8em;
   font-weight: 600;
@@ -20,4 +26,13 @@ input[type="text"], input[type="number"], select {
 }
 .card-panel {
   padding: 8px 16px;
+}
+.center {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.row p.col {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
