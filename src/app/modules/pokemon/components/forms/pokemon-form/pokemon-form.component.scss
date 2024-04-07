@@ -4,8 +4,13 @@
 .ng-invalid:not(form) {
   border-left: 5px solid #fd3333;
 }
-input[type="text"], input[type="number"], select {
+input[type="text"], input[type="number"], input[type="url"], select {
   padding-left: 10px;
+}
+
+input[type="url"] {
+  color: #5073ff;
+  text-decoration: underline;
 }
 
 .pkmn-image {

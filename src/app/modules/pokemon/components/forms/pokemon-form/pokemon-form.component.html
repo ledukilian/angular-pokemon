@@ -47,13 +47,34 @@
             </div>
           </div>
         </div>
+
+        <!-- Pokemon name -->
+        <div *ngIf="isAddForm" class="form-group">
+          <label for="picture">🖼 Image</label>
+          <input type="url" class="form-control" id="picture"
+          required
+          pattern="https?://.+"
+          [(ngModel)]="pokemon.picture" name="picture"
+          (ngModelChange)="updateImage()"
+          #name="ngModel">
+          <a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number"
+             target="_blank" style="border-bottom: 1px solid #039be5">
+            <small>Voir la liste des pokémons</small>
+          </a>
+
+          <!--TODO : Réparer la vérification valid et pristine-->
+          <!--<div [hidden]="picture.valid || picture.pristine"
+               class="card-panel red lighten-1">
+            ❌ L'image du pokémon est requise
+          </div>-->
+        </div>
         <div class="col s12">
 
         </div>
 
         <!-- Pokemon types -->
-        <form class="form-group">
-          <label for="types">Types</label>
+        <form class="form-group" style="margin-top:15px;">
+          <label for="types">🌪 Types</label>
           <div class="row">
             <p *ngFor="let type of types" class="col s6">
               <label>
