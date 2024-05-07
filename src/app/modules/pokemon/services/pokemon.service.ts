@@ -11,7 +11,6 @@ export class PokemonService {
   ) {}
 
   getPokemonList(): Observable<Pokemon[]> {
-    console.warn('patate');
     return this.http.get<Pokemon[]>('api/pokemons').pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, []))
@@ -19,10 +18,19 @@ export class PokemonService {
   }
 
   getPokemonById(pokemonId: number): Observable<Pokemon|undefined> {
-    console.warn('saucisse');
     return this.http.get<Pokemon>(`api/pokemons/${pokemonId}`).pipe(
       tap((response) => this.log(response)),
       catchError((error) => this.handleError(error, undefined))
+    );
+  }
+
+  searchPokemonList(term: string): Observable<Pokemon[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Pokemon[]>(`api/pokemons?name=${term}`).pipe(
+      tap((response) => this.log(response)),
+      catchError((error) => this.handleError(error, []))
     );
   }
 
