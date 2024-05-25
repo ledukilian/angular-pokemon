@@ -11,6 +11,9 @@ import { FormsModule } from "@angular/forms";
 import { PokemonFormComponent } from './components/forms/pokemon-form/pokemon-form.component';
 import { EditPokemonComponent } from './components/pages/edit-pokemon/edit-pokemon.component';
 import { AddPokemonComponent } from './components/pages/add-pokemon/add-pokemon.component';
+import {AppModule} from "../../app.module";
+import {SearchPokemonComponent} from "./components/search-pokemon/search-pokemon.component";
+import { LoaderComponent } from './components/parts/loader/loader.component';
 
 const pokemonRoutes: Routes = [
   { path: 'pokemon/:id', component: DetailPokemonComponent },
@@ -28,12 +31,15 @@ const pokemonRoutes: Routes = [
     PokemonTypeEmojiPipe,
     PokemonFormComponent,
     EditPokemonComponent,
-    AddPokemonComponent
+    AddPokemonComponent,
+    SearchPokemonComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(pokemonRoutes)
+    RouterModule.forChild(pokemonRoutes),
+
   ],
   providers: [
     PokemonService

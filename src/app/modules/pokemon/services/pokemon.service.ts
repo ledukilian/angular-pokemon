@@ -25,7 +25,13 @@ export class PokemonService {
   }
 
   searchPokemonList(term: string): Observable<Pokemon[]> {
+    // Si le terme de recherche est vide, on ne fait pas de requête
     if (!term.trim()) {
+      // On retourne un Observable vide
+      return of([]);
+    }
+    // Si le terme de recherche ne contient qu'une lettre, on ne fait pas de requête
+    if (term.length <= 1) {
       return of([]);
     }
     return this.http.get<Pokemon[]>(`api/pokemons?name=${term}`).pipe(
