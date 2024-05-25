@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PokemonModule } from "./modules/pokemon/pokemon.module";
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app/app.component';
-import { NotFoundComponent } from './components/pages/errors/not-found/not-found.component';
+import { BaseComponent } from './pages/base.component';
+import { NotFoundComponent } from './pages/errors/not-found/not-found.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
@@ -12,7 +12,7 @@ import { SearchPokemonComponent } from './modules/pokemon/components/search-poke
 
 @NgModule({
   declarations: [
-    AppComponent,
+    BaseComponent,
     NotFoundComponent
   ],
   imports: [
@@ -25,6 +25,6 @@ import { SearchPokemonComponent } from './modules/pokemon/components/search-poke
   ],
   providers: [],
   exports: [],
-  bootstrap: [AppComponent]
+  bootstrap: [BaseComponent]
 })
 export class AppModule { }
