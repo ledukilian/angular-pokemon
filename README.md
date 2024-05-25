@@ -16,3 +16,5 @@ Pour accéder à l'application, vous pouvez utiliser les identifiants suivants :
 
 ## 📚 Aide supplémentaire
 Pour obtenir plus d'aide sur Angular CLI, utilisez `ng help` ou consultez la page [Angular CLI Overview and Command Reference](https://angular.io/cli).
+
+## 🎨 Preview
