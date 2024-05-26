@@ -3,3 +3,7 @@
 </div>
 <h2>Éditer {{ pokemon?.name}}</h2>
 <app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
+<h4 *ngIf='!pokemon' class="center">
+  <app-loader></app-loader>
+</h4>
+

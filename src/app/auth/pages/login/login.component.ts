@@ -8,9 +8,10 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  message: string = 'Vous êtes déconnecté. (admin/admin)';
+  message: string = '(admin/admin)';
   name: string;
   password: string;
+  auth: AuthService;
 
   constructor(
     public authService: AuthService,
@@ -18,11 +19,13 @@ export class LoginComponent {
   ) { }
 
   ngOnInit() {
-    console.log(this.authService.isLoggedIn);
+    // J'utilise le service dans le template, je dois donc le mettre dans une propriété
+    this.auth = this.authService;
+    console.log(this.auth.isLoggedIn);
   }
 
   setMessage() {
-    if (this.authService.isLoggedIn) {
+    if (this.auth.isLoggedIn) {
       this.message = 'Vous êtes connecté.';
     } else {
       this.message = 'Identifiant ou mot de passe incorrect !';
@@ -31,12 +34,12 @@ export class LoginComponent {
 
   login() {
     this.message = 'Tentative de connexion en cours...';
-    this.authService.login(this.name, this.password)
+    this.auth.login(this.name, this.password)
       .subscribe((isLoggedIn: boolean) => {
         this.setMessage();
-        if (isLoggedIn && this.authService.redirectUrl) {
+        if (isLoggedIn && this.auth.redirectUrl) {
         // On se "souvient" de la page à laquelle l'utilisateur a voulu accéder
-          this.router.navigate([this.authService.redirectUrl]);
+          this.router.navigate([this.auth.redirectUrl]);
         } else {
           this.password = '';
           this.router.navigate(['/']);
@@ -46,6 +49,7 @@ export class LoginComponent {
   }
 
   logout() {
-
+    this.auth.logout();
+    this.message = 'Vous êtes déconnecté.';
   }
 }
