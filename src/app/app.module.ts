@@ -8,12 +8,13 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./modules/pokemon/services/in-memory-data/in-memory-data.service";
-import { SearchPokemonComponent } from './modules/pokemon/components/search-pokemon/search-pokemon.component';
+import { LoginComponent } from './auth/pages/login/login.component';
 
 @NgModule({
   declarations: [
     BaseComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
