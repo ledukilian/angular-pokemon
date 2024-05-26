@@ -1,0 +1,43 @@
+.ng-valid[required] {
+  border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form) {
+  border-left: 5px solid #fd3333;
+}
+input[type="text"], input[type="number"], input[type="url"], select {
+  padding-left: 10px;
+}
+
+input[type="url"] {
+  color: #5073ff;
+  text-decoration: underline;
+}
+
+.pkmn-image {
+  margin: auto;
+  max-width: 18em;
+  filter: saturate(170%);
+  transform: rotateY(3.142rad);
+}
+.pkmn-type {
+  color: black;
+  display: inline-block;
+  padding: 0px 4px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 3px;
+}
+.card-panel {
+  padding: 8px 16px;
+}
+.center {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.row p.col {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}

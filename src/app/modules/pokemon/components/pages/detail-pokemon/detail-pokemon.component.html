@@ -1,0 +1,35 @@
+<div *ngIf="pokemon" id="pokemon-details" class="row s6">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-image">
+            <img [src]="pokemon.picture" class="pkmn-image" alt="Image de {{ pokemon.name }}">
+          </div>
+          <div class="card-content">
+            <p>
+                <span *ngFor="let type of pokemon.types"
+                                             class="pkmn-type {{ type | pokemonTypeColor}}">
+                {{ type | pokemonTypeEmoji}}{{ type }}
+              </span>
+            </p>
+            <h2 class="header center">{{ pokemon.name }}</h2>
+            <p>❤ <strong>{{ pokemon.hp }}</strong></p>
+            <p>⚔ <strong>{{ pokemon.cp }}</strong></p>
+            <br />
+            <p class="text-muted">[{{ pokemon.id }}]</p>
+            <p class="text-muted">{{ pokemon.created | date:"dd/MM/yyyy" }}</p>
+          </div>
+          <div class="card-action">
+            <a (click)="goBack()" class="waves-effect blue darken-2 btn-small">Retour</a>
+            <a (click)="deletePokemon(pokemon)" class="waves-effect red darken-1 btn-small right">Supprimer</a>
+            <a (click)="goToEdit(pokemon)" class="waves-effect yellow darken-2 btn-small right" style="margin-right:16px;">Modifier</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 *ngIf='!pokemon' class="center">
+  <app-loader></app-loader>
+</h4>

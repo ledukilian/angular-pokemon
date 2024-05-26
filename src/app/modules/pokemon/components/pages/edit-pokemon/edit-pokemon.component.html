@@ -1,0 +1,9 @@
+<div class="center">
+  <a *ngIf="pokemon" (click)="goBack(pokemon)" class="waves-effect blue darken-2 btn-small" style="margin-right:16px;">Retour</a>
+</div>
+<h2>Éditer {{ pokemon?.name}}</h2>
+<app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>
+<h4 *ngIf='!pokemon' class="center">
+  <app-loader></app-loader>
+</h4>
+

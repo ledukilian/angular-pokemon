@@ -1,27 +1,23 @@
-# AngularPokemon
+# 🦝 Angular Pokémon 🐼
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+## 📝 Description
+Un projet pour découvrir Angular en développant une application <b>Pokémon</b> par <b>Simon DIENY</b>.
+[Voir le cours Udemy](https://www.udemy.com/course/angular-developper-tutoriel-application-typescript/ "Développer une application Angular")
 
-## Development server
+Ce projet a été généré avec [Angular](https://angular.io/) version **16.2**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Utilisez `ng serve` pour lancer le serveur de développement (http://localhost:4200/).
 
-## Code scaffolding
+## 🔒 Authentification
+Pour accéder à l'application, vous pouvez utiliser les identifiants suivants :
+- [ ] **Utilisateur** : `admin`
+- [ ] **Mot de passe** : `admin`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## 📚 Aide supplémentaire
+Pour obtenir plus d'aide sur Angular CLI, utilisez `ng help` ou consultez la page [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🎨 Preview
+![pkmn_01](https://github.com/ledukilian/angular-pokemon/assets/54909696/795f7579-ac41-4762-9e9e-84a22b6a0785)
+![pkmn_02](https://github.com/ledukilian/angular-pokemon/assets/54909696/bb7f4877-b6ba-4a9d-a6ac-40556829f90c)
+![pkmn_03](https://github.com/ledukilian/angular-pokemon/assets/54909696/6e9ce980-c00c-4359-a185-827829512a18)
