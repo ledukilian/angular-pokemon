@@ -28,7 +28,6 @@ export class SearchPokemonComponent {
       distinctUntilChanged(),
       // On effectue la recherche : opérateur RxJS pour projeter les valeurs émises par un observable dans un autre observable
       switchMap((term: string) => this.pokemonService.searchPokemonList(term)),
-
     );
   }
 
