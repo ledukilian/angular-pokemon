@@ -11,7 +11,7 @@ import {PokemonService} from "../../services/pokemon.service";
 })
 export class SearchPokemonComponent {
   // Subject : Flux de recherche dans le temps de l'utilisateur (chaque frappe de touche)
-  // Pour visualiser, on cherche Krabby (🦀) avec une petite faute de frappe : {.."a"."ab"."abc".."ab".."abo"...}
+  // Pour visualiser, on cherche Krabby (🦀) avec une petite faute de frappe (c au lieu de a) : {.."k"."kr"."krc".."kr".."kra"...}
   searchTerms = new Subject<string>();
   pokemons$: Observable<Pokemon[]>;
 
