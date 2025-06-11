@@ -23,3 +23,13 @@ Pour obtenir plus d'aide sur Angular CLI, utilisez `ng help` ou consultez la pag
 ![pkmn_01](https://github.com/ledukilian/angular-pokemon/assets/54909696/795f7579-ac41-4762-9e9e-84a22b6a0785)
 ![pkmn_02](https://github.com/ledukilian/angular-pokemon/assets/54909696/bb7f4877-b6ba-4a9d-a6ac-40556829f90c)
 ![pkmn_03](https://github.com/ledukilian/angular-pokemon/assets/54909696/6e9ce980-c00c-4359-a185-827829512a18)
+
+### 🚀 Déploiement sur Github Pages
+
+```bash
+# Créer le build
+npm run build 
+
+# Envoyer le build sur la branche gh-pages
+npm run deploy
+```
